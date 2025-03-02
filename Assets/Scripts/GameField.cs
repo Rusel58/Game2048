@@ -77,10 +77,10 @@ public class GameField : MonoBehaviour
 
         // Создание начальных клеток
         for (int i = 0; i < InitCellsCount; i++)
-            GenerateRandomCell();
+            CreateCell();
     }
 
-    // Генерация случайной клетки на поле
+    // Генерация случайной клетки на поле во время игры(20% на 4)
     private void GenerateRandomCell()
     {
         var emptyCells = new List<Cell>();
@@ -94,8 +94,8 @@ public class GameField : MonoBehaviour
         if (emptyCells.Count == 0)
             throw new System.Exception("There is no any empty cell!");
 
-        // Случайное значение: 1 с вероятностью 90%, 2 с вероятностью 10%
-        int value = Random.Range(0, 10) == 0 ? 2 : 1;
+        // 20% вероятность для значения 4, 80% для значения 2
+        int value = Random.Range(0, 100) < 20 ? 2 : 1;
 
         // Выбор случайной пустой клетки и установка значения
         var cell = emptyCells[Random.Range(0, emptyCells.Count)];
@@ -126,7 +126,7 @@ public class GameField : MonoBehaviour
         return emptyCells[Random.Range(0, emptyCells.Count)];
     }
 
-    // Создание новой клетки в случайной пустой позиции
+    // Генерация случайной клетки на поле в начале игры(вероятность 10% на 4)
     public void CreateCell()
     {
         var position = GetEmptyPosition();
@@ -137,7 +137,7 @@ public class GameField : MonoBehaviour
     }
 
     // Обработка ввода (движение клеток)
-    private void OnInput(Vector2 direction)
+    public void OnInput(Vector2 direction)
     {
         if (!GameController.GameStarted)
         {
@@ -260,16 +260,36 @@ public class GameField : MonoBehaviour
                 field[x, y].ResetFlags();
     }
 
-    private void Update()
-    {
-        // Обработка ввода с клавиатуры
-        if (Input.GetKeyDown(KeyCode.A))
-            OnInput(Vector2.left); // Движение влево
-        if (Input.GetKeyDown(KeyCode.D))
-            OnInput(Vector2.right); // Движение вправо
-        if (Input.GetKeyDown(KeyCode.W))
-            OnInput(Vector2.up); // Движение вверх
-        if (Input.GetKeyDown(KeyCode.S))
-            OnInput(Vector2.down); // Движение вниз
-    }
+    //// Получаем текущие значения всех клеток в одномерном массиве
+    //public int[] GetAllCellValues()
+    //{
+    //    int[] cellsFlat = new int[FieldSize * FieldSize];
+    //    int index = 0;
+    //    for (int x = 0; x < FieldSize; x++)
+    //    {
+    //        for (int y = 0; y < FieldSize; y++)
+    //        {
+    //            cellsFlat[index] = field[x, y].Value;
+    //            index++;
+    //        }
+    //    }
+    //    return cellsFlat;
+    //}
+
+    //// Восстанавливаем значения клеток из массива
+    //public void SetAllCellValues(int[] cellsFlat)
+    //{
+    //    if (cellsFlat == null || cellsFlat.Length != FieldSize * FieldSize) return;
+
+    //    int index = 0;
+    //    for (int x = 0; x < FieldSize; x++)
+    //    {
+    //        for (int y = 0; y < FieldSize; y++)
+    //        {
+    //            field[x, y].SetValue(x, y, cellsFlat[index]);
+    //            index++;
+    //        }
+    //    }
+    //}
+
 }
