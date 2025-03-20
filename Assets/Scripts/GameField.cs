@@ -152,8 +152,8 @@ public class GameField : MonoBehaviour
         if (anyCellMoved)
         {
             GenerateRandomCell();
-            CheckGameResult();
         }
+        CheckGameResult();
     }
 
     // ƒвижение клеток в указанном направлении
@@ -259,37 +259,4 @@ public class GameField : MonoBehaviour
             for (int y = 0; y < FieldSize; y++)
                 field[x, y].ResetFlags();
     }
-
-    //// ѕолучаем текущие значени€ всех клеток в одномерном массиве
-    //public int[] GetAllCellValues()
-    //{
-    //    int[] cellsFlat = new int[FieldSize * FieldSize];
-    //    int index = 0;
-    //    for (int x = 0; x < FieldSize; x++)
-    //    {
-    //        for (int y = 0; y < FieldSize; y++)
-    //        {
-    //            cellsFlat[index] = field[x, y].Value;
-    //            index++;
-    //        }
-    //    }
-    //    return cellsFlat;
-    //}
-
-    //// ¬осстанавливаем значени€ клеток из массива
-    //public void SetAllCellValues(int[] cellsFlat)
-    //{
-    //    if (cellsFlat == null || cellsFlat.Length != FieldSize * FieldSize) return;
-
-    //    int index = 0;
-    //    for (int x = 0; x < FieldSize; x++)
-    //    {
-    //        for (int y = 0; y < FieldSize; y++)
-    //        {
-    //            field[x, y].SetValue(x, y, cellsFlat[index]);
-    //            index++;
-    //        }
-    //    }
-    //}
-
 }

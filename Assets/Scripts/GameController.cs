@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 public class GameController : MonoBehaviour
 {
@@ -93,21 +92,6 @@ public class GameController : MonoBehaviour
     {
         GameStarted = false;
         gameResult.text = "You lose!";
-
-    //    // Сравниваем текущие очки с рекордом
-    //    if (Points > bestScore)
-    //    {
-    //        bestScore = Points;
-    //    }
-
-    //    // Формируем SaveData и сохраняем
-    //    SaveData data = new SaveData
-    //    {
-    //        bestScore = bestScore,
-    //        fieldSize = GameField.Instance.FieldSize,
-    //        cells = GameField.Instance.GetAllCellValues()
-    //    };
-    //    SaveSystem.SaveGame(data);
     }
 
     public void StartGame()
@@ -134,5 +118,19 @@ public class GameController : MonoBehaviour
     void Update()
     {
 
+    }
+    public void StopGame()
+    {
+        GameStarted = false;
+    }
+
+    public static void ResetPoints()
+    {
+        Points = 0;
+    }
+
+    public static void SetGameStarted(bool value)
+    {
+        GameStarted = value;
     }
 }

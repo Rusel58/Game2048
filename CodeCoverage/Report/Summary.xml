@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>20.03.2025 - 5:00:18</Generatedon>
+    <Parser>MultiReportParser (2x OpenCoverParser)</Parser>
+    <Assemblies>2</Assemblies>
+    <Classes>12</Classes>
+    <Files>12</Files>
+    <Coveredlines>646</Coveredlines>
+    <Uncoveredlines>53</Uncoveredlines>
+    <Coverablelines>699</Coverablelines>
+    <Totallines>1436</Totallines>
+    <Linecoverage>92.4</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>87</Coveredmethods>
+    <Totalmethods>90</Totalmethods>
+    <Methodcoverage>96.6</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="NewAssembly" classes="6" coverage="84" coveredlines="269" coverablelines="320" totallines="622" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="48" totalmethods="51" methodcoverage="94.1">
+      <Class name="Cell" coverage="100" coveredlines="44" coverablelines="44" totallines="82" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="17" totalmethods="17" methodcoverage="100" />
+      <Class name="CellView" coverage="100" coveredlines="13" coverablelines="13" totallines="33" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="3" totalmethods="3" methodcoverage="100" />
+      <Class name="ColorManager" coverage="100" coveredlines="5" coverablelines="5" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="1" methodcoverage="100" />
+      <Class name="GameController" coverage="83.7" coveredlines="36" coverablelines="43" totallines="136" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="13" totalmethods="15" methodcoverage="86.6" />
+      <Class name="GameField" coverage="96.8" coveredlines="153" coverablelines="158" totallines="262" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="12" totalmethods="13" methodcoverage="92.3" />
+      <Class name="InputHandler" coverage="31.5" coveredlines="18" coverablelines="57" totallines="91" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+    </Assembly>
+    <Assembly name="Tests" classes="6" coverage="99.4" coveredlines="377" coverablelines="379" totallines="814" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="39" totalmethods="39" methodcoverage="100">
+      <Class name="CellTests" coverage="100" coveredlines="85" coverablelines="85" totallines="173" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="8" methodcoverage="100" />
+      <Class name="CellViewTests" coverage="100" coveredlines="48" coverablelines="48" totallines="111" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="ColorManagerTests" coverage="100" coveredlines="15" coverablelines="15" totallines="37" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+      <Class name="GameControllerTests" coverage="100" coveredlines="67" coverablelines="67" totallines="151" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
+      <Class name="GameFieldTests" coverage="99.3" coveredlines="144" coverablelines="145" totallines="274" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="13" totalmethods="13" methodcoverage="100" />
+      <Class name="InputHandlerTests" coverage="94.7" coveredlines="18" coverablelines="19" totallines="68" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="4" methodcoverage="100" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

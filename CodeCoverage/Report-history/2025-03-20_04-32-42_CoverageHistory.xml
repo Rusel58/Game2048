@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2025-03-20_04-32-42" tag="">
+  <assembly name="NewAssembly">
+    <class name="Cell" coveredlines="44" coverablelines="44" totallines="82" coveredbranches="0" totalbranches="0" />
+    <class name="CellView" coveredlines="13" coverablelines="13" totallines="33" coveredbranches="0" totalbranches="0" />
+    <class name="ColorManager" coveredlines="5" coverablelines="5" totallines="18" coveredbranches="0" totalbranches="0" />
+    <class name="GameController" coveredlines="36" coverablelines="43" totallines="151" coveredbranches="0" totalbranches="0" />
+    <class name="GameField" coveredlines="152" coverablelines="158" totallines="262" coveredbranches="0" totalbranches="0" />
+    <class name="InputHandler" coveredlines="7" coverablelines="57" totallines="91" coveredbranches="0" totalbranches="0" />
+  </assembly>
+  <assembly name="Tests">
+    <class name="CellTests" coveredlines="85" coverablelines="85" totallines="173" coveredbranches="0" totalbranches="0" />
+    <class name="CellViewTests" coveredlines="48" coverablelines="48" totallines="111" coveredbranches="0" totalbranches="0" />
+    <class name="ColorManagerTests" coveredlines="15" coverablelines="15" totallines="37" coveredbranches="0" totalbranches="0" />
+    <class name="GameControllerTests" coveredlines="67" coverablelines="67" totallines="151" coveredbranches="0" totalbranches="0" />
+    <class name="GameFieldTests" coveredlines="126" coverablelines="130" totallines="263" coveredbranches="0" totalbranches="0" />
+    <class name="InputHandlerTests" coveredlines="10" coverablelines="10" totallines="33" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>
